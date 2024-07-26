@@ -1,5 +1,5 @@
 ﻿using Xunit;
-namespace JT.Mentoring.CodeKata.Tests;
+namespace HN.Learning.PotterKata.Tests;
 
 public class BookCalculatorTests
 {

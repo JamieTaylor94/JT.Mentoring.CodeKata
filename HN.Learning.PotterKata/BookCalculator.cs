@@ -1,10 +1,10 @@
-﻿namespace JT.Mentoring.CodeKata;
+﻿namespace HN.Learning.PotterKata;
 
 public class BookCalculator
 {
-    private readonly int SingleBookPrice = 8;
+    private const int SingleBookPrice = 8;
 
-    private Dictionary<int, decimal> _discounts = new() {
+    private readonly Dictionary<int, decimal> _discounts = new() {
         { 0, 0 },
         { 1, 1 },
         { 2, 0.95m },
@@ -16,7 +16,6 @@ public class BookCalculator
     public decimal Calculate(string[] books)
     {
         var basketCollection = new List<List<string>>();
-        decimal totalPrice = 0;
 
         foreach (var book in books)
         {
@@ -38,11 +37,6 @@ public class BookCalculator
             }
         }
 
-        foreach (var basket in basketCollection)
-        {
-            totalPrice += basket.Count * SingleBookPrice * _discounts[basket.Count];
-        }
-
-        return totalPrice;
+        return basketCollection.Sum(basket => basket.Count * SingleBookPrice * _discounts[basket.Count]);
     }
 }

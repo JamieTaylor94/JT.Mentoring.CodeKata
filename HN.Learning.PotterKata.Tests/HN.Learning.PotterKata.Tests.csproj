@@ -17,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\JT.Mentoring.CodeKata\JT.Mentoring.CodeKata.csproj" />
+      <ProjectReference Include="..\HN.Learning.PotterKata\HN.Learning.PotterKata.csproj" />
     </ItemGroup>
 
 </Project>
